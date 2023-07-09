@@ -24,8 +24,12 @@ function fillInputBox(element) {
     document.getElementsByTagName("textarea")[0].value += element.id;
     console.log("Filling data in...")
 }
-function evaluate(event) {
+function evaluateExpression(event) {
     if(event.code == "Enter") {
-        
+        var expression = document.getElementsByTagName("textarea")[0].value;
+        console.log(expression);
+    }
+    else {
+        console.log("User pressed a key.")
     }
 }
