@@ -20,3 +20,7 @@ function toggleDarkMode(startup) {
         }
     }
 }
+function fillInputBox(element) {
+    document.getElementsByTagName("input")[0].value += element.id;
+    console.log("Filling data in...")
+}
