@@ -29,10 +29,21 @@ function evaluateExpression(event) {
         var userInput = document.getElementById("textarea").value;
         var expression = userInput.split("\n").pop();
         console.log(expression);
-        var result = userInput + expression.value + "\n";
-        userInput = result;
+        var result = userInput + "=" + expression;
+        document.getElementById("textarea").value = result;
     }
     else {
         console.log("User pressed a key.")
     }
+}
+function isValid(expression) {
+    for(var i = 0; i < expression.length; i++) {
+        if(!isCharacterPermitted(expression[i])) {
+            return false;
+        }
+    }
+    return true;
+}
+function isCharacterPermitted(character) {
+    
 }
