@@ -21,11 +21,29 @@ function toggleDarkMode(startup) {
     }
 }
 function fillInputBox(element) {
-    document.getElementsByTagName("textarea")[0].value += element.id;
+    document.getElementById("textarea").value += element.id;
     console.log("Filling data in...")
 }
-document.addEventListener("keypress", function (event) {
-    if(event.code = "Enter") {
-        alert("You pressed Enter");
+function evaluateExpression(event) {
+    if(event.code == "Enter") {
+        var userInput = document.getElementById("textarea").value;
+        var expression = userInput.split("\n").pop();
+        console.log(expression);
+        var result = userInput + "=" + expression;
+        document.getElementById("textarea").value = result;
     }
-});
+    else {
+        console.log("User pressed a key.")
+    }
+}
+function isValid(expression) {
+    for(var i = 0; i < expression.length; i++) {
+        if(!isCharacterPermitted(expression[i])) {
+            return false;
+        }
+    }
+    return true;
+}
+function isCharacterPermitted(character) {
+    
+}

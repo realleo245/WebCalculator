@@ -12,7 +12,7 @@
     <body onload = "toggleDarkMode(true)">
         <div class = "container">
             <div class = "row">
-                <textarea></textarea>
+                <textarea id = "textarea" onkeydown = "evaluateExpression(event)"></textarea>
                 <div class = "btn-group">
                     <button type = "button" id = "7" class = "btn" onclick = "fillInputBox(this)">7</button>
                     <button type = "button" id = "8" class = "btn" onclick = "fillInputBox(this)">8</button>
