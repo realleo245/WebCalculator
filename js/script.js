@@ -20,3 +20,12 @@ function toggleDarkMode(startup) {
         }
     }
 }
+function fillInputBox(element) {
+    document.getElementsByTagName("textarea")[0].value += element.id;
+    console.log("Filling data in...")
+}
+function evaluate(event) {
+    if(event.code == "Enter") {
+        
+    }
+}
