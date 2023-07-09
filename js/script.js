@@ -21,6 +21,11 @@ function toggleDarkMode(startup) {
     }
 }
 function fillInputBox(element) {
-    document.getElementsByTagName("input")[0].value += element.id;
+    document.getElementsByTagName("textarea")[0].value += element.id;
     console.log("Filling data in...")
 }
+document.addEventListener("keypress", function (event) {
+    if(event.code = "Enter") {
+        alert("You pressed Enter");
+    }
+});
