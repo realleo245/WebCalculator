@@ -14,6 +14,11 @@
             <div class = "row">
                 <textarea id = "textarea" onkeydown = "evaluateExpression(event)"></textarea>
                 <div class = "btn-group">
+                    <button type = "button" class = "btn"></button>
+                    <button type = "button" id = "clear" class = "btn" onclick = "clearEverything()">CE</button>
+                    <button type = "button" id = "backspace" class = "btn" onclick = "backspace()">&#9003;</button>
+                </div>
+                <div class = "btn-group">
                     <button type = "button" id = "7" class = "btn" onclick = "fillInputBox(this)">7</button>
                     <button type = "button" id = "8" class = "btn" onclick = "fillInputBox(this)">8</button>
                     <button type = "button" id = "9" class = "btn" onclick = "fillInputBox(this)">9</button>

@@ -20,6 +20,14 @@ function toggleDarkMode(startup) {
         }
     }
 }
+function clearEverything() {
+    document.getElementById("textarea").value = "";
+    console.log("Everything cleared");
+}
+function backspace() {
+    document.getElementById("textarea").value = document.getElementById("textarea").value.substring(0, document.getElementById("textarea").value.length - 1);
+    console.log("Backspace successful");
+}
 function fillInputBox(element) {
     document.getElementById("textarea").value += element.id;
     console.log("Filling data in...")
