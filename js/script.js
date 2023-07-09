@@ -19,5 +19,4 @@ function toggleDarkMode(startup) {
             buttons[i].classList.add("btn-dark");
         }
     }
-    
 }
