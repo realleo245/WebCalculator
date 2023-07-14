@@ -37,6 +37,7 @@ function evaluateExpression(event) {
         var userInput = document.getElementById("textarea").value;
         var expression = userInput.split("\n").pop();
         console.log(expression);
+        tokenizeExpression(expression);
         var result = userInput + "=" + expression;
         document.getElementById("textarea").value = result;
     }
@@ -52,6 +53,53 @@ function isValid(expression) {
     }
     return true;
 }
-function isCharacterPermitted(character) {
-    
+function tokenizeExpression(expression) {
+    var lastIndex = 0;
+    var tokenizedExpression = [];
+    for(var i = 0; i < expression.length; i++) {
+        if(isDigit(expression[i - 1]) && isOperator(expression[i])) {
+            for(var j = lastIndex; j < i; j++) {
+                var number = typeof number === "undefined"? number + expression[j] : "" + expression[j];
+                tokenizedExpression.push(number);
+            }
+        }
+        else if(isOperator(expression[i - 1]) && isDigit(expression[i]) && i != 0) {
+            tokenizedExpression.push(expression[i - 1]);
+        }
+    }
+    console.log(tokenizedExpression);
+    return tokenizedExpression;
+}
+function parseExpression(expression) {
+    for(var i = 0; i < expression.length; i++) {
+
+    }
+}
+function isDigit(character) {
+    switch(character) {
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            return true;
+        default:
+            return false;
+    }
+}
+function isOperator(character) {
+    switch(character) {
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+            return true;
+        default:
+            return false;
+    }
 }
