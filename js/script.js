@@ -59,7 +59,7 @@ function tokenizeExpression(expression) {
     for(var i = 0; i < expression.length; i++) {
         if(isDigit(expression[i - 1]) && isOperator(expression[i])) {
             for(var j = lastIndex; j < i; j++) {
-                var number = typeof number === "undefined"? number + expression[j] : "" + expression[j];
+                var number = (typeof number === "undefined") ? (number + expression[j]) : ("" + expression[j]);
                 tokenizedExpression.push(number);
             }
         }
