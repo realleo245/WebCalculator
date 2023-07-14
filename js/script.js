@@ -1,4 +1,5 @@
 var darkMode = window.matchMedia('prefers-color-scheme: dark');
+alert("This calculator isn't functional yet. None of the keys work");
 function toggleDarkMode(startup) {
     var buttons = document.getElementsByClassName("btn");
     for(var i = 0; i < buttons.length; i++) {
