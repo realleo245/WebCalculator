@@ -40,6 +40,7 @@ function evaluateExpression(event) {
         console.log(expression);
         var result = userInput + "=" + expression;
         document.getElementById("textarea").value = result;
+        window.localStorage.setItem(userInput, result);
     }
     else {
         console.log("User pressed a key.")
