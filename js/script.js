@@ -1,5 +1,6 @@
 var darkMode = window.matchMedia('prefers-color-scheme: dark');
 alert("This calculator isn't functional yet. None of the keys work");
+var numCalculations = 0;
 function toggleDarkMode(startup) {
     var buttons = document.getElementsByClassName("btn");
     for(var i = 0; i < buttons.length; i++) {
@@ -40,6 +41,9 @@ function evaluateExpression(event) {
         console.log(expression);
         var result = userInput + "=" + expression;
         document.getElementById("textarea").value = result;
+        window.localStorage.setItem(numCalculations, expression + ":" + result);
+        numCalculations++;
+        console.log("Local storage updated with" + expression + ":" + result)
     }
     else {
         console.log("User pressed a key.")

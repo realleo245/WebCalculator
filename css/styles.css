@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+table, th, td {
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 2%;
+    border-color: rgb(16, 1, 1);
+    border-style: solid;
+    border-collapse: collapse;
+  }
+  
+td {
+    border-right: 2% solid rgb(16, 1, 1);
+}
